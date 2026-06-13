@@ -1,0 +1,118 @@
+{
+  "name": "The Guardian Content API Vocabulary",
+  "description": "Domain vocabulary for The Guardian Content API covering news content, editorial taxonomy, and media types.",
+  "version": "1.0.0",
+  "source": "https://open-platform.theguardian.com/documentation/",
+  "terms": [
+    {
+      "term": "content",
+      "definition": "A piece of Guardian content such as an article, liveblog, gallery, video, or interactive.",
+      "type": "resource"
+    },
+    {
+      "term": "contentId",
+      "definition": "The unique path-based identifier for a content item (e.g., technology/2024/jan/01/article-slug).",
+      "type": "identifier"
+    },
+    {
+      "term": "section",
+      "definition": "A top-level editorial category of The Guardian (e.g., technology, world, business, sport).",
+      "type": "taxonomy"
+    },
+    {
+      "term": "tag",
+      "definition": "A keyword, contributor, series, or tone label used to categorize Guardian content.",
+      "type": "taxonomy"
+    },
+    {
+      "term": "edition",
+      "definition": "A regional edition of The Guardian: UK, US, Australia, International, or Europe.",
+      "type": "configuration"
+    },
+    {
+      "term": "webPublicationDate",
+      "definition": "The ISO 8601 timestamp when content was published on the Guardian website.",
+      "type": "metadata"
+    },
+    {
+      "term": "webTitle",
+      "definition": "The headline or display title of content as shown on the Guardian website.",
+      "type": "metadata"
+    },
+    {
+      "term": "webUrl",
+      "definition": "The public URL for a content item or taxonomy term on theguardian.com.",
+      "type": "link"
+    },
+    {
+      "term": "apiUrl",
+      "definition": "The URL for retrieving a content item or taxonomy term via the Content API.",
+      "type": "link"
+    },
+    {
+      "term": "userTier",
+      "definition": "The access tier of the API key: developer (test), approved, or internal.",
+      "type": "access"
+    },
+    {
+      "term": "fields",
+      "definition": "Optional additional metadata fields for content items (headline, byline, body, thumbnail, etc.).",
+      "type": "parameter"
+    },
+    {
+      "term": "show-fields",
+      "definition": "Query parameter to request specific additional fields in content responses.",
+      "type": "parameter"
+    },
+    {
+      "term": "show-tags",
+      "definition": "Query parameter to include tag data in content responses.",
+      "type": "parameter"
+    },
+    {
+      "term": "order-by",
+      "definition": "Sort order for search results: newest, oldest, or relevance.",
+      "type": "parameter"
+    },
+    {
+      "term": "page-size",
+      "definition": "Number of results per page in paginated responses (max 50 for developer tier).",
+      "type": "parameter"
+    },
+    {
+      "term": "liveblog",
+      "definition": "A continuously updated content type for breaking news coverage.",
+      "type": "contentType"
+    },
+    {
+      "term": "gallery",
+      "definition": "A photo gallery content type.",
+      "type": "contentType"
+    },
+    {
+      "term": "interactive",
+      "definition": "An interactive data journalism content type.",
+      "type": "contentType"
+    },
+    {
+      "term": "crossword",
+      "definition": "A crossword puzzle content type.",
+      "type": "contentType"
+    },
+    {
+      "term": "byline",
+      "definition": "The author attribution for a piece of Guardian content.",
+      "type": "metadata"
+    },
+    {
+      "term": "standfirst",
+      "definition": "A short introductory paragraph summarizing an article, displayed beneath the headline.",
+      "type": "metadata"
+    },
+    {
+      "term": "trailText",
+      "definition": "A short promotional text used for article previews and social sharing.",
+      "type": "metadata"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "response": {
+    "status": "ok",
+    "userTier": "developer",
+    "total": 5,
+    "startIndex": 1,
+    "pageSize": 10,
+    "currentPage": 1,
+    "pages": 1,
+    "results": [
+      {
+        "id": "technology/artificialintelligenceai",
+        "type": "keyword",
+        "sectionId": "technology",
+        "sectionName": "Technology",
+        "webTitle": "Artificial intelligence (AI)",
+        "webUrl": "https://www.theguardian.com/technology/artificialintelligenceai",
+        "apiUrl": "https://content.guardianapis.com/technology/artificialintelligenceai"
+      }
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Edition identifier (uk, us, au, international, europe)"
+    },
+    "path": {
+      "type": "string"
+    },
+    "edition": {
+      "type": "string"
+    },
+    "webTitle": {
+      "type": "string"
+    },
+    "webUrl": {
+      "type": "string",
+      "format": "uri"
+    },
+    "apiUrl": {
+      "type": "string",
+      "format": "uri"
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Edition"
+}

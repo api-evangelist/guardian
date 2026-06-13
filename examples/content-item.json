@@ -1,0 +1,25 @@
+{
+  "response": {
+    "status": "ok",
+    "userTier": "developer",
+    "total": 1,
+    "content": {
+      "id": "technology/2024/jan/01/ai-future-2024",
+      "type": "article",
+      "sectionId": "technology",
+      "sectionName": "Technology",
+      "webPublicationDate": "2024-01-01T10:00:00Z",
+      "webTitle": "AI in 2024: What to Expect",
+      "webUrl": "https://www.theguardian.com/technology/2024/jan/01/ai-future-2024",
+      "apiUrl": "https://content.guardianapis.com/technology/2024/jan/01/ai-future-2024",
+      "fields": {
+        "headline": "AI in 2024: What to Expect",
+        "standfirst": "A deep dive into the AI developments shaping 2024",
+        "byline": "Jane Smith",
+        "bodyText": "The year 2024 will see significant advances in artificial intelligence..."
+      },
+      "tags": [],
+      "isHosted": false
+    }
+  }
+}

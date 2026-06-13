@@ -1,0 +1,30 @@
+{
+  "response": {
+    "status": "ok",
+    "userTier": "developer",
+    "total": 3,
+    "results": [
+      {
+        "id": "technology",
+        "webTitle": "Technology",
+        "webUrl": "https://www.theguardian.com/technology",
+        "apiUrl": "https://content.guardianapis.com/technology",
+        "editions": []
+      },
+      {
+        "id": "world",
+        "webTitle": "World news",
+        "webUrl": "https://www.theguardian.com/world",
+        "apiUrl": "https://content.guardianapis.com/world",
+        "editions": []
+      },
+      {
+        "id": "business",
+        "webTitle": "Business",
+        "webUrl": "https://www.theguardian.com/business",
+        "apiUrl": "https://content.guardianapis.com/business",
+        "editions": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "type": "object",
+  "properties": {
+    "response": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string",
+          "description": "Response status",
+          "enum": [
+            "ok",
+            "error"
+          ]
+        },
+        "userTier": {
+          "type": "string",
+          "description": "API access tier",
+          "enum": [
+            "developer",
+            "partner",
+            "internal"
+          ]
+        },
+        "total": {
+          "type": "integer",
+          "description": "Total number of results"
+        },
+        "startIndex": {
+          "type": "integer",
+          "description": "Starting index of results"
+        },
+        "pageSize": {
+          "type": "integer",
+          "description": "Number of results per page"
+        },
+        "currentPage": {
+          "type": "integer",
+          "description": "Current page number"
+        },
+        "pages": {
+          "type": "integer",
+          "description": "Total number of pages"
+        },
+        "orderBy": {
+          "type": "string",
+          "description": "Sort order of results"
+        },
+        "results": {
+          "type": "array",
+          "items": {
+            "$ref": "#/components/schemas/ContentItem"
+          }
+        }
+      }
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SearchResponse"
+}

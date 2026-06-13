@@ -1,0 +1,109 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique content identifier path"
+    },
+    "type": {
+      "type": "string",
+      "description": "Content type",
+      "enum": [
+        "article",
+        "liveblog",
+        "gallery",
+        "interactive",
+        "picture",
+        "video",
+        "crossword",
+        "audio"
+      ]
+    },
+    "sectionId": {
+      "type": "string",
+      "description": "Section identifier"
+    },
+    "sectionName": {
+      "type": "string",
+      "description": "Human-readable section name"
+    },
+    "webPublicationDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Publication date in ISO 8601 format"
+    },
+    "webTitle": {
+      "type": "string",
+      "description": "Article headline"
+    },
+    "webUrl": {
+      "type": "string",
+      "format": "uri",
+      "description": "URL on theguardian.com"
+    },
+    "apiUrl": {
+      "type": "string",
+      "format": "uri",
+      "description": "API URL for this content item"
+    },
+    "isHosted": {
+      "type": "boolean",
+      "description": "Whether the content is hosted by the Guardian"
+    },
+    "pillarId": {
+      "type": "string",
+      "description": "Content pillar identifier"
+    },
+    "pillarName": {
+      "type": "string",
+      "description": "Content pillar name"
+    },
+    "fields": {
+      "type": "object",
+      "description": "Additional fields (when show-fields is specified)",
+      "properties": {
+        "headline": {
+          "type": "string"
+        },
+        "body": {
+          "type": "string"
+        },
+        "thumbnail": {
+          "type": "string"
+        },
+        "shortUrl": {
+          "type": "string"
+        },
+        "byline": {
+          "type": "string"
+        },
+        "trailText": {
+          "type": "string"
+        },
+        "wordcount": {
+          "type": "string"
+        },
+        "starRating": {
+          "type": "string"
+        },
+        "standfirst": {
+          "type": "string"
+        },
+        "lastModified": {
+          "type": "string"
+        },
+        "publication": {
+          "type": "string"
+        }
+      }
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/Tag"
+      }
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ContentItem"
+}

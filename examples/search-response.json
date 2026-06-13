@@ -1,0 +1,25 @@
+{
+  "response": {
+    "status": "ok",
+    "userTier": "developer",
+    "total": 42150,
+    "startIndex": 1,
+    "pageSize": 10,
+    "currentPage": 1,
+    "pages": 4215,
+    "orderBy": "newest",
+    "results": [
+      {
+        "id": "technology/2024/jan/01/ai-future-2024",
+        "type": "article",
+        "sectionId": "technology",
+        "sectionName": "Technology",
+        "webPublicationDate": "2024-01-01T10:00:00Z",
+        "webTitle": "AI in 2024: What to Expect",
+        "webUrl": "https://www.theguardian.com/technology/2024/jan/01/ai-future-2024",
+        "apiUrl": "https://content.guardianapis.com/technology/2024/jan/01/ai-future-2024",
+        "isHosted": false
+      }
+    ]
+  }
+}

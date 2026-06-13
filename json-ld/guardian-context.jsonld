@@ -1,0 +1,133 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "schema": "https://schema.org/",
+    "guardian": "https://open-platform.theguardian.com/vocabulary#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+
+    "ContentItem": "guardian:ContentItem",
+    "Tag": "guardian:Tag",
+    "Section": "guardian:Section",
+    "Edition": "guardian:Edition",
+    "SearchResponse": "guardian:SearchResponse",
+
+    "id": "@id",
+    "type": "@type",
+
+    "contentId": {
+      "@id": "guardian:contentId",
+      "@type": "@id"
+    },
+    "webTitle": {
+      "@id": "schema:name",
+      "@type": "xsd:string"
+    },
+    "webUrl": {
+      "@id": "schema:url",
+      "@type": "@id"
+    },
+    "apiUrl": {
+      "@id": "guardian:apiUrl",
+      "@type": "@id"
+    },
+    "webPublicationDate": {
+      "@id": "schema:datePublished",
+      "@type": "xsd:dateTime"
+    },
+    "sectionId": {
+      "@id": "guardian:sectionId",
+      "@type": "xsd:string"
+    },
+    "sectionName": {
+      "@id": "guardian:sectionName",
+      "@type": "xsd:string"
+    },
+    "byline": {
+      "@id": "schema:author",
+      "@type": "xsd:string"
+    },
+    "headline": {
+      "@id": "schema:headline",
+      "@type": "xsd:string"
+    },
+    "standfirst": {
+      "@id": "schema:description",
+      "@type": "xsd:string"
+    },
+    "bodyText": {
+      "@id": "schema:articleBody",
+      "@type": "xsd:string"
+    },
+    "trailText": {
+      "@id": "guardian:trailText",
+      "@type": "xsd:string"
+    },
+    "thumbnail": {
+      "@id": "schema:thumbnailUrl",
+      "@type": "@id"
+    },
+    "tags": {
+      "@id": "guardian:tags",
+      "@container": "@set"
+    },
+    "tagType": {
+      "@id": "guardian:tagType",
+      "@type": "xsd:string"
+    },
+    "contentType": {
+      "@id": "guardian:contentType",
+      "@type": "xsd:string"
+    },
+    "isHosted": {
+      "@id": "guardian:isHosted",
+      "@type": "xsd:boolean"
+    },
+    "total": {
+      "@id": "guardian:total",
+      "@type": "xsd:integer"
+    },
+    "startIndex": {
+      "@id": "guardian:startIndex",
+      "@type": "xsd:integer"
+    },
+    "pageSize": {
+      "@id": "guardian:pageSize",
+      "@type": "xsd:integer"
+    },
+    "currentPage": {
+      "@id": "guardian:currentPage",
+      "@type": "xsd:integer"
+    },
+    "pages": {
+      "@id": "guardian:pages",
+      "@type": "xsd:integer"
+    },
+    "results": {
+      "@id": "guardian:results",
+      "@container": "@list"
+    },
+    "status": {
+      "@id": "guardian:status",
+      "@type": "xsd:string"
+    },
+    "userTier": {
+      "@id": "guardian:userTier",
+      "@type": "xsd:string"
+    },
+    "orderBy": {
+      "@id": "guardian:orderBy",
+      "@type": "xsd:string"
+    },
+    "fields": {
+      "@id": "guardian:fields"
+    },
+    "editions": {
+      "@id": "guardian:editions",
+      "@container": "@set"
+    },
+    "code": {
+      "@id": "guardian:code",
+      "@type": "xsd:string"
+    }
+  }
+}
