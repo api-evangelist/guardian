@@ -1,0 +1,79 @@
+specification: FinOps Framework
+specificationVersion: '1.0'
+schema: https://www.finops.org/framework/
+provider: The Guardian
+providerId: guardian
+created: '2026-06-13'
+modified: '2026-06-13'
+reconciled: true
+tags:
+  - FinOps
+  - Cost Management
+  - News
+  - Media
+description: 'FOCUS-aligned FinOps for The Guardian Content API. The API is free for non-commercial developer use with a daily quota model. Commercial access requires a negotiated contract with The Guardian Open Platform team. Costs are primarily driven by commercial licensing agreements rather than per-call metering.'
+sources:
+  - https://open-platform.theguardian.com/access/
+alignedWith:
+  framework: FinOps Foundation Framework
+  frameworkUrl: https://www.finops.org/framework/
+  dataSpec: FOCUS
+  dataSpecVersion: '1.3'
+  dataSpecUrl: https://focus.finops.org/focus-specification/v1-3/
+publisherName: Guardian News & Media Limited
+serviceCategory: News & Media Content
+billingModel:
+  pricingCategory: Freemium + Commercial License
+  billingFrequency: Annual or Negotiated
+  billingCurrency: GBP
+  chargeCategories:
+    - Usage
+    - License
+focusColumns:
+  ServiceName: Guardian Content API
+  ServiceCategory: News & Media
+  ProviderName: Guardian News & Media
+  PublisherName: Guardian News & Media Limited
+  InvoiceIssuerName: Guardian News & Media Limited
+  BillingCurrency: GBP
+meters:
+  - name: api_requests
+    unit: request
+    aggregation: sum
+    dimensions:
+      - endpoint
+      - plan
+      - api_key
+  - name: content_items_retrieved
+    unit: article
+    aggregation: sum
+    dimensions:
+      - section
+      - type
+      - edition
+skus:
+  - id: guardian-developer-free
+    name: Developer API Key (Free)
+    description: Free non-commercial API access. 5,000 requests/day, 12 requests/second.
+    pricingModel: free
+    unit: api-key
+    price: 0
+    currency: GBP
+  - id: guardian-commercial-license
+    name: Commercial API License
+    description: Commercial access to Guardian content including images and video. Pricing negotiated with Guardian Open Platform team.
+    pricingModel: negotiated
+    unit: license
+    price: negotiated
+    currency: GBP
+costOptimization:
+  - name: Cache responses locally
+    description: Cache API responses to stay within the 5,000 daily request limit on the free tier.
+  - name: Use pagination efficiently
+    description: Request up to 50 items per page to minimize total API calls for bulk content retrieval.
+  - name: Filter by section and tag
+    description: Use section and tag filters to retrieve targeted results rather than broad searches that return unwanted content.
+  - name: Request only needed fields
+    description: Use the show-fields parameter to return only required article fields, reducing payload size.
+  - name: Monitor daily quota
+    description: Track daily request counts against the 5,000 limit to avoid unexpected throttling.

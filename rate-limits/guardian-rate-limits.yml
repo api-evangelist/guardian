@@ -1,0 +1,54 @@
+specification: API Commons Rate Limits
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/RateLimits
+provider: The Guardian
+providerId: guardian
+created: '2026-06-13'
+modified: '2026-06-13'
+reconciled: true
+tags:
+  - Rate Limiting
+  - News
+  - Media
+description: The Guardian Content API enforces rate limits per developer API key. The free developer tier allows up to 12 requests per second and 5,000 requests per day. Commercial keys have higher or negotiated limits. Exceeding limits results in API errors and temporary blocking.
+sources:
+  - https://open-platform.theguardian.com/access/
+  - https://groups.google.com/g/guardian-api-talk/c/X-v_2f_xwfI
+responseCodes:
+  throttled: 429
+limits:
+  - name: Requests per second (developer tier)
+    scope: api-key
+    metric: requests_per_second
+    limit: 12
+    timeFrame: second
+    plan: guardian-developer-free
+  - name: Requests per day (developer tier)
+    scope: api-key
+    metric: requests_per_day
+    limit: 5000
+    timeFrame: day
+    plan: guardian-developer-free
+  - name: Requests per second (commercial tier)
+    scope: api-key
+    metric: requests_per_second
+    limit: -1
+    timeFrame: second
+    plan: guardian-commercial
+    description: Higher limits negotiated with the Guardian Open Platform team.
+  - name: Requests per day (commercial tier)
+    scope: api-key
+    metric: requests_per_day
+    limit: -1
+    timeFrame: day
+    plan: guardian-commercial
+    description: Higher limits negotiated with the Guardian Open Platform team.
+policies:
+  - name: API key required
+    description: All requests must include a valid api-key query parameter. Requests without a key are rejected.
+  - name: Daily limit reset
+    description: Daily request quotas reset at midnight UTC.
+  - name: Non-commercial restriction
+    description: The free developer key is restricted to non-commercial use. Commercial projects must obtain a commercial API key.
+  - name: Student and research projects
+    description: Non-profit, academic, and student projects qualify for the free developer tier with standard limits.

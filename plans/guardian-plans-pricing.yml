@@ -1,0 +1,71 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: The Guardian
+providerId: guardian
+created: '2026-06-13'
+modified: '2026-06-13'
+reconciled: true
+tags:
+  - News
+  - Media
+  - Content
+description: The Guardian Open Platform offers a free developer tier and a commercial tier for businesses. The free tier provides instant access with generous rate limits suitable for non-commercial and personal projects. Commercial use requires a separate key request and negotiated terms.
+sources:
+  - https://open-platform.theguardian.com/access/
+plans:
+  - id: guardian-developer-free
+    name: Developer (Free)
+    type: free
+    description: Free instant access for developers and non-commercial projects. Provides access to all article text, metadata, tags, sections, and editions. Images and video require a commercial subscription.
+    entries:
+      - label: API calls per day
+        name: calls_per_day
+        type: quota
+        metric: api_calls
+        limit: 5000
+        timeFrame: day
+        unit: 1
+        price: 0
+        userMultiplied: false
+      - label: API calls per second
+        name: calls_per_second
+        type: rate
+        metric: api_calls
+        limit: 12
+        timeFrame: second
+        unit: 1
+        price: 0
+        userMultiplied: false
+    elements:
+      - name: Article text and body content
+      - name: Article metadata (byline, headline, date, URL)
+      - name: Search endpoint with keyword queries
+      - name: Sections endpoint (75+ sections)
+      - name: Tags endpoint
+      - name: Editions endpoint (UK, US, Australia)
+      - name: Single item retrieval by article ID
+      - name: Date range filtering
+      - name: JSON and XML response formats
+      - name: Pagination support (1-50 items per page)
+  - id: guardian-commercial
+    name: Commercial
+    type: commercial
+    description: Commercial license for businesses and organisations using Guardian content in products or services. Includes access to images, video, and higher rate limits. Pricing negotiated individually with The Guardian Open Platform team.
+    entries:
+      - label: API calls per day
+        name: calls_per_day
+        type: quota
+        metric: api_calls
+        limit: -1
+        timeFrame: day
+        unit: 1
+        price: negotiated
+        userMultiplied: false
+    elements:
+      - name: All Developer tier features
+      - name: Image and multimedia access
+      - name: Higher rate limits
+      - name: Commercial usage rights
+      - name: Dedicated support
+      - name: Custom data licensing
