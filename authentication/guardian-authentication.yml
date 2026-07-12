@@ -1,0 +1,17 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/openapi.json
+summary:
+  types:
+  - apiKey
+  api_key_in:
+  - query
+schemes:
+- name: apiKeyQuery
+  type: apiKey
+  in: query
+  parameter: api-key
+  description: API key obtained from https://open-platform.theguardian.com/access/. A test key
+    'test' is available for development.
+  sources:
+  - openapi/openapi.json

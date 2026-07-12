@@ -35,6 +35,12 @@ apis:
       - type: FinOps
         url: finops/guardian-finops.yml
 common:
+  - type: VulnerabilityDisclosure
+    url: security/guardian-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/guardian-domain-security.yml
+  - type: Authentication
+    url: authentication/guardian-authentication.yml
   - type: Website
     url: https://open-platform.theguardian.com/
   - type: Documentation
@@ -45,6 +51,8 @@ common:
     url: https://groups.google.com/g/guardian-api-talk
   - type: TermsOfService
     url: https://open-platform.theguardian.com/legal/terms/
+  - type: Blog
+    url: https://www.theguardian.com/info/series/digital-blog/rss
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
