@@ -35,6 +35,8 @@ apis:
       - type: FinOps
         url: finops/guardian-finops.yml
 common:
+  - type: AgenticAccess
+    url: agentic-access/guardian-agentic-access.yml
   - type: VulnerabilityDisclosure
     url: security/guardian-vulnerability-disclosure.yml
   - type: DomainSecurity
