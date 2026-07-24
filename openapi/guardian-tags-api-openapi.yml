@@ -1,0 +1,136 @@
+openapi: 3.0.3
+info:
+  title: The Guardian Content Tags API
+  description: The Guardian's Open Platform Content API provides free access to all content published on theguardian.com. Search for articles, browse sections and tags, retrieve specific content items, and access edition-specific content. Supports filtering by date, section, tag, and more.
+  version: 2.0.0
+  contact:
+    name: The Guardian Open Platform
+    url: https://open-platform.theguardian.com/
+  termsOfService: https://open-platform.theguardian.com/access/
+  x-jentic-source-url: https://open-platform.theguardian.com/
+servers:
+- url: https://content.guardianapis.com
+  description: Guardian Content API Production Server
+security:
+- apiKeyQuery: []
+tags:
+- name: Tags
+  description: Browse and search Guardian tags (keywords, series, contributors, etc.)
+paths:
+  /tags:
+    get:
+      operationId: searchTags
+      summary: Search for tags
+      description: Search for tags (keywords, series, contributors, blogs, etc.). Tags are used to classify content and can be used for filtering in the search endpoint.
+      tags:
+      - Tags
+      parameters:
+      - name: q
+        in: query
+        description: Search query for tag names
+        schema:
+          type: string
+      - name: type
+        in: query
+        description: Filter by tag type
+        schema:
+          type: string
+          enum:
+          - keyword
+          - series
+          - contributor
+          - blog
+          - tone
+          - type
+          - newspaper-book
+          - newspaper-book-section
+          - tracking
+          - paid-content
+      - name: section
+        in: query
+        description: Filter tags by section
+        schema:
+          type: string
+      - name: page
+        in: query
+        description: Page number
+        schema:
+          type: integer
+          default: 1
+      - name: page-size
+        in: query
+        description: Results per page
+        schema:
+          type: integer
+          default: 10
+      responses:
+        '200':
+          description: Successful response with tags
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TagsResponse'
+components:
+  schemas:
+    TagsResponse:
+      type: object
+      properties:
+        response:
+          type: object
+          properties:
+            status:
+              type: string
+            userTier:
+              type: string
+            total:
+              type: integer
+            startIndex:
+              type: integer
+            pageSize:
+              type: integer
+            currentPage:
+              type: integer
+            pages:
+              type: integer
+            results:
+              type: array
+              items:
+                $ref: '#/components/schemas/Tag'
+    Tag:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Tag identifier
+        type:
+          type: string
+          description: Tag type
+          enum:
+          - keyword
+          - series
+          - contributor
+          - blog
+          - tone
+          - type
+          - newspaper-book
+          - newspaper-book-section
+        sectionId:
+          type: string
+        sectionName:
+          type: string
+        webTitle:
+          type: string
+        webUrl:
+          type: string
+          format: uri
+        apiUrl:
+          type: string
+          format: uri
+        keywordType:
+          type: string
+  securitySchemes:
+    apiKeyQuery:
+      type: apiKey
+      in: query
+      name: api-key
+      description: API key obtained from https://open-platform.theguardian.com/access/. A test key 'test' is available for development.

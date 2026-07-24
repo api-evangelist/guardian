@@ -1,0 +1,93 @@
+openapi: 3.0.3
+info:
+  title: The Guardian Content Sections API
+  description: The Guardian's Open Platform Content API provides free access to all content published on theguardian.com. Search for articles, browse sections and tags, retrieve specific content items, and access edition-specific content. Supports filtering by date, section, tag, and more.
+  version: 2.0.0
+  contact:
+    name: The Guardian Open Platform
+    url: https://open-platform.theguardian.com/
+  termsOfService: https://open-platform.theguardian.com/access/
+  x-jentic-source-url: https://open-platform.theguardian.com/
+servers:
+- url: https://content.guardianapis.com
+  description: Guardian Content API Production Server
+security:
+- apiKeyQuery: []
+tags:
+- name: Sections
+  description: Browse Guardian sections
+paths:
+  /sections:
+    get:
+      operationId: getSections
+      summary: List all sections
+      description: Retrieve all Guardian sections. Sections represent the major content categories like News, Sport, Culture, etc.
+      tags:
+      - Sections
+      parameters:
+      - name: q
+        in: query
+        description: Search query for section names
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response with sections
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SectionsResponse'
+components:
+  schemas:
+    SectionsResponse:
+      type: object
+      properties:
+        response:
+          type: object
+          properties:
+            status:
+              type: string
+            userTier:
+              type: string
+            total:
+              type: integer
+            results:
+              type: array
+              items:
+                $ref: '#/components/schemas/Section'
+    Section:
+      type: object
+      properties:
+        id:
+          type: string
+        webTitle:
+          type: string
+        webUrl:
+          type: string
+          format: uri
+        apiUrl:
+          type: string
+          format: uri
+        editions:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: string
+              webTitle:
+                type: string
+              webUrl:
+                type: string
+                format: uri
+              apiUrl:
+                type: string
+                format: uri
+              code:
+                type: string
+  securitySchemes:
+    apiKeyQuery:
+      type: apiKey
+      in: query
+      name: api-key
+      description: API key obtained from https://open-platform.theguardian.com/access/. A test key 'test' is available for development.
