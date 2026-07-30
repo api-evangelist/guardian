@@ -1,4 +1,18 @@
 aid: guardian
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/guardian.png
 name: The Guardian
 description: "The Guardian newspaper REST API providing access to 2M+ articles, news content, sections, tags, editions, and real-time breaking news from Guardian journalists worldwide. The API covers all articles published since 1999 and supports advanced search, filtering by section, tag, date range, and edition (UK, US, Australia)."
 url: https://open-platform.theguardian.com/
@@ -14,26 +28,69 @@ tags:
   - Articles
   - Journalism
 apis:
-  - name: The Guardian Content API
-    description: "Search and retrieve articles, news content, and multimedia from The Guardian's archive of 2 million+ pieces of content published since 1999. Supports keyword search, section filtering, tag filtering, date range queries, and retrieval of full article body text with metadata."
-    humanURL: https://open-platform.theguardian.com/documentation/
-    baseURL: https://content.guardianapis.com/
-    tags:
-      - News
-      - Articles
-      - Content
-      - Search
-    properties:
-      - type: Documentation
-        url: https://open-platform.theguardian.com/documentation/
-      - type: Authentication
-        url: https://open-platform.theguardian.com/access/
-      - type: Plans
-        url: plans/guardian-plans-pricing.yml
-      - type: RateLimits
-        url: rate-limits/guardian-rate-limits.yml
-      - type: FinOps
-        url: finops/guardian-finops.yml
+- name: The Guardian Content API
+  description: >-
+    Search and retrieve articles, news content, and multimedia from The Guardian's archive of 2 million+
+    pieces of content published since 1999. Supports keyword search, section filtering, tag filtering,
+    date range queries, and retrieval of full article body text with metadata.
+  humanURL: https://open-platform.theguardian.com/documentation/
+  baseURL: https://content.guardianapis.com/
+  tags:
+  - News
+  - Articles
+  - Content
+  - Search
+  properties:
+  - type: Documentation
+    url: https://open-platform.theguardian.com/documentation/
+  - type: Authentication
+    url: https://open-platform.theguardian.com/access/
+  - type: Plans
+    url: plans/guardian-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/guardian-rate-limits.yml
+  - type: FinOps
+    url: finops/guardian-finops.yml
+- aid: guardian:guardian-content-api
+  name: The Guardian Content API
+  description: Search and retrieve Guardian content items
+  humanURL: https://open-platform.theguardian.com/documentation/
+  baseURL: https://content.guardianapis.com/
+  tags:
+  - Content
+  properties:
+  - type: OpenAPI
+    url: openapi/guardian-content-api-openapi.yml
+- aid: guardian:guardian-editions-api
+  name: The Guardian Editions API
+  description: Browse Guardian editions (UK, US, AU, International, Europe)
+  humanURL: https://open-platform.theguardian.com/documentation/
+  baseURL: https://content.guardianapis.com/
+  tags:
+  - Editions
+  properties:
+  - type: OpenAPI
+    url: openapi/guardian-editions-api-openapi.yml
+- aid: guardian:guardian-sections-api
+  name: The Guardian Sections API
+  description: Browse Guardian sections
+  humanURL: https://open-platform.theguardian.com/documentation/
+  baseURL: https://content.guardianapis.com/
+  tags:
+  - Sections
+  properties:
+  - type: OpenAPI
+    url: openapi/guardian-sections-api-openapi.yml
+- aid: guardian:guardian-tags-api
+  name: The Guardian Tags API
+  description: Browse and search Guardian tags (keywords, series, contributors, etc.)
+  humanURL: https://open-platform.theguardian.com/documentation/
+  baseURL: https://content.guardianapis.com/
+  tags:
+  - Tags
+  properties:
+  - type: OpenAPI
+    url: openapi/guardian-tags-api-openapi.yml
 common:
   - type: AgenticAccess
     url: agentic-access/guardian-agentic-access.yml
