@@ -16,7 +16,7 @@ image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/guardian.p
 name: The Guardian
 description: "The Guardian newspaper REST API providing access to 2M+ articles, news content, sections, tags, editions, and real-time breaking news from Guardian journalists worldwide. The API covers all articles published since 1999 and supports advanced search, filtering by section, tag, date range, and edition (UK, US, Australia)."
 url: https://open-platform.theguardian.com/
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 created: '2026-06-13'
 modified: '2026-06-13'
 x-category: "News"
