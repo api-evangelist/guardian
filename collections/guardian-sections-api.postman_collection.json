@@ -1,0 +1,135 @@
+{
+  "item": [
+    {
+      "id": "2d990046-f6fe-4b56-bd09-26f5797ac4e3",
+      "name": "Sections",
+      "description": {
+        "content": "Browse Guardian sections",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "496ebbec-c488-4046-b372-47ead2831955",
+          "name": "List all sections",
+          "request": {
+            "name": "List all sections",
+            "description": {
+              "content": "Retrieve all Guardian sections. Sections represent the major content categories like News, Sport, Culture, etc.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "sections"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "q",
+                  "value": "<string>",
+                  "description": "Search query for section names"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "82f47bac-d5ef-453c-8c6e-b8edb555b57c",
+              "name": "Successful response with sections",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "sections"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "q",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api-key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"response\": {\n    \"status\": \"string\",\n    \"userTier\": \"string\",\n    \"total\": 3938,\n    \"results\": [\n      {\n        \"id\": \"string\",\n        \"webTitle\": \"string\",\n        \"webUrl\": \"http://aMOuTlByz.tsiPR2m1Kpq.E,o0FraOJn.OmtvoSwgHdLdR5vilibN9d4K6e9u0U1i-vib+fpA5\",\n        \"apiUrl\": \"http://qzmqgTvtxeRoe.dbKkTDlQMC1V8aJL5ovReWvTeH8TdMRkv5I6gUfMeYqmFDf9GXlGCaD8\",\n        \"editions\": [\n          {\n            \"id\": \"string\",\n            \"webTitle\": \"string\",\n            \"webUrl\": \"https://WwFswVVfkHqRpepe.lzpjAAzyBPlMFFrdeSfIP5OpVYg6oKvXIZ1YlOOBfP\",\n            \"apiUrl\": \"https://buTo.diQNuOCDoxgORno8+.23kjL\",\n            \"code\": \"string\"\n          },\n          {\n            \"id\": \"string\",\n            \"webTitle\": \"string\",\n            \"webUrl\": \"http://SURZnRPHqNWVgezokVvREbI.hdlvTxsqPtEx7yW6+22zFgs.0NzPX8l2Szzn20Xvony4.wHhXhpg7KOxoWGnt1NnP,Dtf5Fv-aWVpuY3R1Bd23ArZ\",\n            \"apiUrl\": \"http://XKpEMrnSllEgnoKbwYFuAzzdpYx.opwLUJh9WTvgnLKjchST4c.,HLa20IC-EScv2I2-9Hkp\",\n            \"code\": \"string\"\n          }\n        ]\n      },\n      {\n        \"id\": \"string\",\n        \"webTitle\": \"string\",\n        \"webUrl\": \"http://bcCSOpOemtyZXZjBbhet.tdQ-txoD2b+pHuw8OY8bHc9CpmEfwO,3LKjEulk2ISJ7RwuVwSl6YEAcmFgvYMFYqPqk0\",\n        \"apiUrl\": \"http://pOlGzEprBDbOStxloqTrO.idblrBIDNnVpfY,KfuEV,EohIqspqf0yCnZJJm3FY0-0vYi\",\n        \"editions\": [\n          {\n            \"id\": \"string\",\n            \"webTitle\": \"string\",\n            \"webUrl\": \"https://ZpBDOQbmTcDcIWboxsOesyNFvWQ.frkkdX6LFcYcsl8ZsZjvXYWJUlbniWDxETZlSCKfPAr5wrM.3\",\n            \"apiUrl\": \"http://MXc.lyhoGPLDnoMsd9ESrVlycaCKbmLFu3SENbSj3YW7HfLn6W\",\n            \"code\": \"string\"\n          },\n          {\n            \"id\": \"string\",\n            \"webTitle\": \"string\",\n            \"webUrl\": \"https://XYjrpjlKbKkrgpVSgsh.nqoq7CzWHnc8p.VI9,ZjbMYqSYTtaIJvteOXN,SQbJ\",\n            \"apiUrl\": \"http://qdFqAsmhSaHsOQVqgJfg.vukVLPnFiX9ZK.hYZ6czqP4FpAQNS2gr+ARkVPDLp\",\n            \"code\": \"string\"\n          }\n        ]\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://content.guardianapis.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "api-key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "query"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "a0c81e1f-36fa-4fda-b188-e98fb5616899",
+    "name": "The Guardian Content Sections API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Guardian's Open Platform Content API provides free access to all content published on theguardian.com. Search for articles, browse sections and tags, retrieve specific content items, and access edition-specific content. Supports filtering by date, section, tag, and more.\n\nContact Support:\n Name: The Guardian Open Platform",
+      "type": "text/plain"
+    }
+  }
+}

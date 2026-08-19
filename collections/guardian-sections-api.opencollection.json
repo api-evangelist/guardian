@@ -1,0 +1,45 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "The Guardian Content Sections API",
+    "version": "2.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "api-key",
+      "value": "{{api-key}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Sections",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List all sections",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://content.guardianapis.com/sections",
+            "params": [
+              {
+                "name": "q",
+                "value": "",
+                "type": "query",
+                "description": "Search query for section names"
+              }
+            ]
+          },
+          "docs": "Retrieve all Guardian sections. Sections represent the major content categories like News, Sport, Culture, etc."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

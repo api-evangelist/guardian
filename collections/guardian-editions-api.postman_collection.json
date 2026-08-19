@@ -1,0 +1,124 @@
+{
+  "item": [
+    {
+      "id": "ddd0378a-4bba-4af9-b1d9-168bb5d8a78d",
+      "name": "Editions",
+      "description": {
+        "content": "Browse Guardian editions (UK, US, AU, International, Europe)",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "dffb735c-6778-4132-a098-62af246e8aba",
+          "name": "List all editions",
+          "request": {
+            "name": "List all editions",
+            "description": {
+              "content": "Retrieve all Guardian editions (UK, US, Australia, International, Europe).",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "editions"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "db55f039-3143-4609-8619-f143fa20f606",
+              "name": "Successful response with editions",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "editions"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"response\": {\n    \"status\": \"string\",\n    \"userTier\": \"string\",\n    \"total\": 6594,\n    \"results\": [\n      {\n        \"id\": \"string\",\n        \"path\": \"string\",\n        \"edition\": \"string\",\n        \"webTitle\": \"string\",\n        \"webUrl\": \"https://RVuXzDSZwsqtjhRXJKrLBAxqGlKaaAY.woY-EzNNSPhTM.mtDkHkHb0VZT6GAODnsjsbx2HoP5h2F4lpjc4F6qWx6FheBlxTq\",\n        \"apiUrl\": \"http://iHYjiRIWfrUgGzoM.idcqbPK3wF0IcwHFp.eBZK,k,PNbt-j\"\n      },\n      {\n        \"id\": \"string\",\n        \"path\": \"string\",\n        \"edition\": \"string\",\n        \"webTitle\": \"string\",\n        \"webUrl\": \"https://UdzhuqNK.onsxbLiUXwBgnhlqTB++,Hu.hdWW2K+8VeLd4bNp69tw-3g1rIWn3r0LWQQZu3-TL0\",\n        \"apiUrl\": \"https://MAjJLTZpAngN.ixWFuJ3TS5W25nht-AYYrmUdg4v,DLN-qVOdFndN5ww9iXaOjrprbQLF2vCBlLwM9cpaUB\"\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://content.guardianapis.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "api-key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "query"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "1db20773-e1af-46d3-a014-1ec6f9b9c65f",
+    "name": "The Guardian Content Editions API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Guardian's Open Platform Content API provides free access to all content published on theguardian.com. Search for articles, browse sections and tags, retrieve specific content items, and access edition-specific content. Supports filtering by date, section, tag, and more.\n\nContact Support:\n Name: The Guardian Open Platform",
+      "type": "text/plain"
+    }
+  }
+}

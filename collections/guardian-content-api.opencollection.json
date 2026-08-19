@@ -1,0 +1,202 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "The Guardian Content API",
+    "version": "2.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "api-key",
+      "value": "{{api-key}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Content",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Search for content",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://content.guardianapis.com/search",
+            "params": [
+              {
+                "name": "q",
+                "value": "",
+                "type": "query",
+                "description": "Full-text search query. Supports AND, OR, NOT operators."
+              },
+              {
+                "name": "query-fields",
+                "value": "",
+                "type": "query",
+                "description": "Specify which indexed fields are used by the q parameter (e.g., headline, body, all)"
+              },
+              {
+                "name": "section",
+                "value": "",
+                "type": "query",
+                "description": "Filter by section ID (e.g., technology, sport). Use | for OR, - prefix to exclude."
+              },
+              {
+                "name": "tag",
+                "value": "",
+                "type": "query",
+                "description": "Filter by tag ID (e.g., technology/apple). Use comma for AND, | for OR, - to exclude."
+              },
+              {
+                "name": "type",
+                "value": "",
+                "type": "query",
+                "description": "Filter by content type"
+              },
+              {
+                "name": "from-date",
+                "value": "",
+                "type": "query",
+                "description": "Return content published on or after this date (YYYY-MM-DD)"
+              },
+              {
+                "name": "to-date",
+                "value": "",
+                "type": "query",
+                "description": "Return content published on or before this date (YYYY-MM-DD)"
+              },
+              {
+                "name": "order-by",
+                "value": "",
+                "type": "query",
+                "description": "Sort order for results"
+              },
+              {
+                "name": "show-fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma-separated list of article fields to include (e.g., body,headline,thumbnail,shortUrl,byline,trailText,wordcount,starRating,all)"
+              },
+              {
+                "name": "show-tags",
+                "value": "",
+                "type": "query",
+                "description": "Comma-separated list of tag types to include (e.g., keyword,contributor,series,blog,tone,type,all)"
+              },
+              {
+                "name": "show-elements",
+                "value": "",
+                "type": "query",
+                "description": "Include media elements (image, video, audio, all)"
+              },
+              {
+                "name": "show-blocks",
+                "value": "",
+                "type": "query",
+                "description": "Include block-level content (body, all, main)"
+              },
+              {
+                "name": "show-references",
+                "value": "",
+                "type": "query",
+                "description": "Include references"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query",
+                "description": "Page number for pagination"
+              },
+              {
+                "name": "page-size",
+                "value": "",
+                "type": "query",
+                "description": "Number of results per page (max 50 for free tier)"
+              },
+              {
+                "name": "use-date",
+                "value": "",
+                "type": "query",
+                "description": "Which date to use for filtering and ordering"
+              },
+              {
+                "name": "lang",
+                "value": "",
+                "type": "query",
+                "description": "ISO language code to filter content by language"
+              },
+              {
+                "name": "star-rating",
+                "value": "",
+                "type": "query",
+                "description": "Filter by star rating (for reviews)"
+              },
+              {
+                "name": "production-office",
+                "value": "",
+                "type": "query",
+                "description": "Filter by production office"
+              }
+            ]
+          },
+          "docs": "Search all Guardian content. Returns articles, liveblogs, galleries, and other content types matching the query. Results are paginated and can be filtered by section, tag, date range, and more."
+        },
+        {
+          "info": {
+            "name": "Get a single content item",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://content.guardianapis.com/:contentId",
+            "params": [
+              {
+                "name": "contentId",
+                "value": "",
+                "type": "path",
+                "description": "The ID (path) of the content item (e.g., world/2024/jan/01/article-slug)"
+              },
+              {
+                "name": "show-fields",
+                "value": "",
+                "type": "query",
+                "description": "Comma-separated list of fields to include"
+              },
+              {
+                "name": "show-tags",
+                "value": "",
+                "type": "query",
+                "description": "Comma-separated list of tag types to include"
+              },
+              {
+                "name": "show-elements",
+                "value": "",
+                "type": "query",
+                "description": "Include media elements"
+              },
+              {
+                "name": "show-blocks",
+                "value": "",
+                "type": "query",
+                "description": "Include block-level content"
+              },
+              {
+                "name": "show-references",
+                "value": "",
+                "type": "query",
+                "description": "Include references"
+              }
+            ]
+          },
+          "docs": "Retrieve a specific content item by its ID path (e.g., technology/2024/jan/01/article-slug)."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

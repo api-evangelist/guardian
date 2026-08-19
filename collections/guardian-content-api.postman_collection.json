@@ -1,0 +1,873 @@
+{
+  "item": [
+    {
+      "id": "b4ba53cf-1053-4edb-bf71-dd2767ea1198",
+      "name": "Content",
+      "description": {
+        "content": "Search and retrieve Guardian content items",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "0bf3dfc2-e657-4d0c-beeb-f7b4accc2db3",
+          "name": "Search for content",
+          "request": {
+            "name": "Search for content",
+            "description": {
+              "content": "Search all Guardian content. Returns articles, liveblogs, galleries, and other content types matching the query. Results are paginated and can be filtered by section, tag, date range, and more.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "search"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "q",
+                  "value": "<string>",
+                  "description": "Full-text search query. Supports AND, OR, NOT operators."
+                },
+                {
+                  "disabled": false,
+                  "key": "query-fields",
+                  "value": "<string>",
+                  "description": "Specify which indexed fields are used by the q parameter (e.g., headline, body, all)"
+                },
+                {
+                  "disabled": false,
+                  "key": "section",
+                  "value": "<string>",
+                  "description": "Filter by section ID (e.g., technology, sport). Use | for OR, - prefix to exclude."
+                },
+                {
+                  "disabled": false,
+                  "key": "tag",
+                  "value": "<string>",
+                  "description": "Filter by tag ID (e.g., technology/apple). Use comma for AND, | for OR, - to exclude."
+                },
+                {
+                  "disabled": false,
+                  "key": "type",
+                  "value": "<string>",
+                  "description": "Filter by content type"
+                },
+                {
+                  "disabled": false,
+                  "key": "from-date",
+                  "value": "<date>",
+                  "description": "Return content published on or after this date (YYYY-MM-DD)"
+                },
+                {
+                  "disabled": false,
+                  "key": "to-date",
+                  "value": "<date>",
+                  "description": "Return content published on or before this date (YYYY-MM-DD)"
+                },
+                {
+                  "disabled": false,
+                  "key": "order-by",
+                  "value": "relevance",
+                  "description": "Sort order for results"
+                },
+                {
+                  "disabled": false,
+                  "key": "show-fields",
+                  "value": "<string>",
+                  "description": "Comma-separated list of article fields to include (e.g., body,headline,thumbnail,shortUrl,byline,trailText,wordcount,starRating,all)"
+                },
+                {
+                  "disabled": false,
+                  "key": "show-tags",
+                  "value": "<string>",
+                  "description": "Comma-separated list of tag types to include (e.g., keyword,contributor,series,blog,tone,type,all)"
+                },
+                {
+                  "disabled": false,
+                  "key": "show-elements",
+                  "value": "<string>",
+                  "description": "Include media elements (image, video, audio, all)"
+                },
+                {
+                  "disabled": false,
+                  "key": "show-blocks",
+                  "value": "<string>",
+                  "description": "Include block-level content (body, all, main)"
+                },
+                {
+                  "disabled": false,
+                  "key": "show-references",
+                  "value": "<string>",
+                  "description": "Include references"
+                },
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "1",
+                  "description": "Page number for pagination"
+                },
+                {
+                  "disabled": false,
+                  "key": "page-size",
+                  "value": "10",
+                  "description": "Number of results per page (max 50 for free tier)"
+                },
+                {
+                  "disabled": false,
+                  "key": "use-date",
+                  "value": "<string>",
+                  "description": "Which date to use for filtering and ordering"
+                },
+                {
+                  "disabled": false,
+                  "key": "lang",
+                  "value": "<string>",
+                  "description": "ISO language code to filter content by language"
+                },
+                {
+                  "disabled": false,
+                  "key": "star-rating",
+                  "value": "<integer>",
+                  "description": "Filter by star rating (for reviews)"
+                },
+                {
+                  "disabled": false,
+                  "key": "production-office",
+                  "value": "<string>",
+                  "description": "Filter by production office"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "4ebc3c8a-439c-4d3a-a355-cd930867ef3b",
+              "name": "Successful response with search results",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "search"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "q",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "query-fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "section",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "tag",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "type",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "from-date",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "to-date",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "order-by",
+                      "value": "relevance"
+                    },
+                    {
+                      "key": "show-fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "show-tags",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "show-elements",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "show-blocks",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "show-references",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "page-size",
+                      "value": "10"
+                    },
+                    {
+                      "key": "use-date",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "star-rating",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "production-office",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api-key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"response\": {\n    \"status\": \"ok\",\n    \"userTier\": \"partner\",\n    \"total\": 9616,\n    \"startIndex\": 7195,\n    \"pageSize\": 4797,\n    \"currentPage\": 1712,\n    \"pages\": 1952,\n    \"orderBy\": \"string\",\n    \"results\": [\n      {\n        \"id\": \"string\",\n        \"type\": \"video\",\n        \"sectionId\": \"string\",\n        \"sectionName\": \"string\",\n        \"webPublicationDate\": \"1985-06-16T06:34:43.302Z\",\n        \"webTitle\": \"string\",\n        \"webUrl\": \"https://rhIrH.sjuRtwZq6gw5DlszSUS40TDckoebYo8\",\n        \"apiUrl\": \"http://lhsdvLjqiX.amhkLe4hEdZTq\",\n        \"isHosted\": true,\n        \"pillarId\": \"string\",\n        \"pillarName\": \"string\",\n        \"fields\": {\n          \"headline\": \"string\",\n          \"body\": \"string\",\n          \"thumbnail\": \"string\",\n          \"shortUrl\": \"string\",\n          \"byline\": \"string\",\n          \"trailText\": \"string\",\n          \"wordcount\": \"string\",\n          \"starRating\": \"string\",\n          \"standfirst\": \"string\",\n          \"lastModified\": \"string\",\n          \"publication\": \"string\"\n        },\n        \"tags\": [\n          {\n            \"id\": \"string\",\n            \"type\": \"series\",\n            \"sectionId\": \"string\",\n            \"sectionName\": \"string\",\n            \"webTitle\": \"string\",\n            \"webUrl\": \"https://fnQKKwCbYdL.byzqtARXsBQvSXaJ9D3VYBn4cj9r8ghbeRjB0oEaM+IEZodLpIEf+xp2qWS\",\n            \"apiUrl\": \"http://OjHoCttfRaM.flhun7pkpyeAUc1hP3HGsLsVZIrCWpQN,FH\",\n            \"keywordType\": \"string\"\n          },\n          {\n            \"id\": \"string\",\n            \"type\": \"blog\",\n            \"sectionId\": \"string\",\n            \"sectionName\": \"string\",\n            \"webTitle\": \"string\",\n            \"webUrl\": \"http://sJIAZAYJ.hyrKLFD62XU,BmgD6.IB5G\",\n            \"apiUrl\": \"http://g.hgaUIESm-0ResLgcrRYO585Jo.uC-KDodKi0.t7okz5kRm3Iw3Hri7ZRzCKUNM+AjcPgHA\",\n            \"keywordType\": \"string\"\n          }\n        ]\n      },\n      {\n        \"id\": \"string\",\n        \"type\": \"audio\",\n        \"sectionId\": \"string\",\n        \"sectionName\": \"string\",\n        \"webPublicationDate\": \"2024-07-01T12:19:10.831Z\",\n        \"webTitle\": \"string\",\n        \"webUrl\": \"https://fdjprvKxCBnPWzvJfRZMY.tcbwMrnCxmSv9Q6\",\n        \"apiUrl\": \"https://tXTUCMgNjtBNjLZZznsutXZM.uctVBQVNJqJbfMGzTmAySC8ETpgkapQTAAIwLZ8Rl1ZP1qOSSI2TOPA92bDygIP,\",\n        \"isHosted\": true,\n        \"pillarId\": \"string\",\n        \"pillarName\": \"string\",\n        \"fields\": {\n          \"headline\": \"string\",\n          \"body\": \"string\",\n          \"thumbnail\": \"string\",\n          \"shortUrl\": \"string\",\n          \"byline\": \"string\",\n          \"trailText\": \"string\",\n          \"wordcount\": \"string\",\n          \"starRating\": \"string\",\n          \"standfirst\": \"string\",\n          \"lastModified\": \"string\",\n          \"publication\": \"string\"\n        },\n        \"tags\": [\n          {\n            \"id\": \"string\",\n            \"type\": \"tone\",\n            \"sectionId\": \"string\",\n            \"sectionName\": \"string\",\n            \"webTitle\": \"string\",\n            \"webUrl\": \"https://QlZeoAEoEiZrcYKiBJRjEuE.avedCc5E-pptMatZsI23Yl1IuWvkYeU-lB4rdaGEhgFESB\",\n            \"apiUrl\": \"https://MsOmClIUGpOjIlkRsAACls.igVM+ErCUQelKsRgdW3Ipwe9nz-tKscNgqtaxydYGtF3p.3EAy6s,a\",\n            \"keywordType\": \"string\"\n          },\n          {\n            \"id\": \"string\",\n            \"type\": \"newspaper-book-section\",\n            \"sectionId\": \"string\",\n            \"sectionName\": \"string\",\n            \"webTitle\": \"string\",\n            \"webUrl\": \"https://SOd.dkgbgNl7rM..UPdMEjl1A1iG5FEpt9J34-.4yPL5TPW9GGYMmeiGJvowml\",\n            \"apiUrl\": \"https://hzfuPMGAuqxsaSopuwMcIEBVKyaQoPGC.drcbbSdhV,N70vqcQmilakCY3B\",\n            \"keywordType\": \"string\"\n          }\n        ]\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "55761a9d-a215-4158-9714-8d71e7abcf25",
+              "name": "Bad request - invalid parameters",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "search"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "q",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "query-fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "section",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "tag",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "type",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "from-date",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "to-date",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "order-by",
+                      "value": "relevance"
+                    },
+                    {
+                      "key": "show-fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "show-tags",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "show-elements",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "show-blocks",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "show-references",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "page-size",
+                      "value": "10"
+                    },
+                    {
+                      "key": "use-date",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "star-rating",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "production-office",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api-key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"response\": {\n    \"status\": \"error\",\n    \"message\": \"string\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "1b75aa0f-f542-4e16-a25e-c468bce7a03e",
+              "name": "Unauthorized - missing or invalid API key",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "search"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "q",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "query-fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "section",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "tag",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "type",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "from-date",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "to-date",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "order-by",
+                      "value": "relevance"
+                    },
+                    {
+                      "key": "show-fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "show-tags",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "show-elements",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "show-blocks",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "show-references",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "page-size",
+                      "value": "10"
+                    },
+                    {
+                      "key": "use-date",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "star-rating",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "production-office",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api-key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"response\": {\n    \"status\": \"error\",\n    \"message\": \"string\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "001580eb-d9b5-4757-b62e-6d0c3ab0efe9",
+              "name": "Rate limit exceeded",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "search"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "q",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "query-fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "section",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "tag",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "type",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "from-date",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "to-date",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "order-by",
+                      "value": "relevance"
+                    },
+                    {
+                      "key": "show-fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "show-tags",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "show-elements",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "show-blocks",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "show-references",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "page-size",
+                      "value": "10"
+                    },
+                    {
+                      "key": "use-date",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "star-rating",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "production-office",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api-key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"response\": {\n    \"status\": \"error\",\n    \"message\": \"string\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f38629d3-ea30-4810-82fd-fa1963c3c935",
+          "name": "Get a single content item",
+          "request": {
+            "name": "Get a single content item",
+            "description": {
+              "content": "Retrieve a specific content item by its ID path (e.g., technology/2024/jan/01/article-slug).",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ":contentId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "show-fields",
+                  "value": "<string>",
+                  "description": "Comma-separated list of fields to include"
+                },
+                {
+                  "disabled": false,
+                  "key": "show-tags",
+                  "value": "<string>",
+                  "description": "Comma-separated list of tag types to include"
+                },
+                {
+                  "disabled": false,
+                  "key": "show-elements",
+                  "value": "<string>",
+                  "description": "Include media elements"
+                },
+                {
+                  "disabled": false,
+                  "key": "show-blocks",
+                  "value": "<string>",
+                  "description": "Include block-level content"
+                },
+                {
+                  "disabled": false,
+                  "key": "show-references",
+                  "value": "<string>",
+                  "description": "Include references"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "contentId",
+                  "description": "(Required) The ID (path) of the content item (e.g., world/2024/jan/01/article-slug)"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "23092a03-ce7b-466b-b1a5-3a4e2036dc3e",
+              "name": "Successful response with content item",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":contentId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "show-fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "show-tags",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "show-elements",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "show-blocks",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "show-references",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api-key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "contentId",
+                      "description": "(Required) The ID (path) of the content item (e.g., world/2024/jan/01/article-slug)"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"response\": {\n    \"status\": \"string\",\n    \"userTier\": \"string\",\n    \"total\": 751,\n    \"content\": {\n      \"id\": \"string\",\n      \"type\": \"gallery\",\n      \"sectionId\": \"string\",\n      \"sectionName\": \"string\",\n      \"webPublicationDate\": \"1962-08-11T06:54:30.370Z\",\n      \"webTitle\": \"string\",\n      \"webUrl\": \"http://unyZDzkrXxgYoxWjihCJbvIWacNv.nuezglZ-\",\n      \"apiUrl\": \"https://I.xzPj9pshPv,msLI9dmkMA0vRV3LKIEmbjGoLYurGXhT0yj\",\n      \"isHosted\": false,\n      \"pillarId\": \"string\",\n      \"pillarName\": \"string\",\n      \"fields\": {\n        \"headline\": \"string\",\n        \"body\": \"string\",\n        \"thumbnail\": \"string\",\n        \"shortUrl\": \"string\",\n        \"byline\": \"string\",\n        \"trailText\": \"string\",\n        \"wordcount\": \"string\",\n        \"starRating\": \"string\",\n        \"standfirst\": \"string\",\n        \"lastModified\": \"string\",\n        \"publication\": \"string\"\n      },\n      \"tags\": [\n        {\n          \"id\": \"string\",\n          \"type\": \"blog\",\n          \"sectionId\": \"string\",\n          \"sectionName\": \"string\",\n          \"webTitle\": \"string\",\n          \"webUrl\": \"https://NCNYmfybTlzKFYpTGlNIHODQPRzun.trwCI9qMAh\",\n          \"apiUrl\": \"http://zYsUB.mejoU+f-eSr-Y\",\n          \"keywordType\": \"string\"\n        },\n        {\n          \"id\": \"string\",\n          \"type\": \"series\",\n          \"sectionId\": \"string\",\n          \"sectionName\": \"string\",\n          \"webTitle\": \"string\",\n          \"webUrl\": \"https://nreSpO.kysmsgu7rDfkL.qbekubnH-dK+gHkvfzjdtJsWjK98InO\",\n          \"apiUrl\": \"https://ZDf.eqjG9ARuN7e4SZa1Vlv1d-Jsa9\",\n          \"keywordType\": \"string\"\n        }\n      ]\n    }\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "98789337-e4b1-4826-8d7a-9e6d5d73e150",
+              "name": "Content item not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":contentId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "show-fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "show-tags",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "show-elements",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "show-blocks",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "show-references",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api-key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "contentId",
+                      "description": "(Required) The ID (path) of the content item (e.g., world/2024/jan/01/article-slug)"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"response\": {\n    \"status\": \"error\",\n    \"message\": \"string\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://content.guardianapis.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "api-key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "query"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "63af1b4e-a40e-4766-b88c-e937bf226256",
+    "name": "The Guardian Content API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Guardian's Open Platform Content API provides free access to all content published on theguardian.com. Search for articles, browse sections and tags, retrieve specific content items, and access edition-specific content. Supports filtering by date, section, tag, and more.\n\nContact Support:\n Name: The Guardian Open Platform",
+      "type": "text/plain"
+    }
+  }
+}

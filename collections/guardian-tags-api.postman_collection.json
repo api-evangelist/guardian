@@ -1,0 +1,175 @@
+{
+  "item": [
+    {
+      "id": "5fbef983-5fa4-4cb0-b0f1-e76de4141347",
+      "name": "Tags",
+      "description": {
+        "content": "Browse and search Guardian tags (keywords, series, contributors, etc.)",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "581ae23a-c098-44f1-8e9a-2574a2d447cb",
+          "name": "Search for tags",
+          "request": {
+            "name": "Search for tags",
+            "description": {
+              "content": "Search for tags (keywords, series, contributors, blogs, etc.). Tags are used to classify content and can be used for filtering in the search endpoint.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "tags"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "q",
+                  "value": "<string>",
+                  "description": "Search query for tag names"
+                },
+                {
+                  "disabled": false,
+                  "key": "type",
+                  "value": "<string>",
+                  "description": "Filter by tag type"
+                },
+                {
+                  "disabled": false,
+                  "key": "section",
+                  "value": "<string>",
+                  "description": "Filter tags by section"
+                },
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "1",
+                  "description": "Page number"
+                },
+                {
+                  "disabled": false,
+                  "key": "page-size",
+                  "value": "10",
+                  "description": "Results per page"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d7cbe031-b5b5-4d8b-b502-949ceefaffd6",
+              "name": "Successful response with tags",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tags"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "q",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "type",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "section",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "page-size",
+                      "value": "10"
+                    },
+                    {
+                      "key": "api-key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"response\": {\n    \"status\": \"string\",\n    \"userTier\": \"string\",\n    \"total\": 605,\n    \"startIndex\": 5798,\n    \"pageSize\": 9512,\n    \"currentPage\": 9426,\n    \"pages\": 6397,\n    \"results\": [\n      {\n        \"id\": \"string\",\n        \"type\": \"newspaper-book\",\n        \"sectionId\": \"string\",\n        \"sectionName\": \"string\",\n        \"webTitle\": \"string\",\n        \"webUrl\": \"https://GolaDbeyDGNwBuvoSoKjtRiNdHrlb.zlodTgHyr0.6Majuy6GiTkw,0IdkhPhCnzEmDimeTZd,1NBWrG3xshKPQ14nLmThD\",\n        \"apiUrl\": \"https://tGikxastIbZLbOfHwSPYCpueIi.xuUvLSXAp3H8k+Vnsrz5Z1G3QXhJs2CMGIt4XfJWKc5nJr2Ip\",\n        \"keywordType\": \"string\"\n      },\n      {\n        \"id\": \"string\",\n        \"type\": \"newspaper-book-section\",\n        \"sectionId\": \"string\",\n        \"sectionName\": \"string\",\n        \"webTitle\": \"string\",\n        \"webUrl\": \"http://cCxjSNoZCrKKiRTJhVadlEXxS.ihjcSu25RhqjGVmZ6,dDkaF5ruliEeWZhfwQB1nBJ5uthDQd.3j1uCJr\",\n        \"apiUrl\": \"http://rGJLlyLjJcwtyMUKwHTnVfJLjT.luccGm-M1d1\",\n        \"keywordType\": \"string\"\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://content.guardianapis.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "api-key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "query"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "dbbfa9af-da61-4963-91f0-1eae6716c3f6",
+    "name": "The Guardian Content Tags API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Guardian's Open Platform Content API provides free access to all content published on theguardian.com. Search for articles, browse sections and tags, retrieve specific content items, and access edition-specific content. Supports filtering by date, section, tag, and more.\n\nContact Support:\n Name: The Guardian Open Platform",
+      "type": "text/plain"
+    }
+  }
+}

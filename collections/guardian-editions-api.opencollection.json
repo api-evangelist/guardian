@@ -1,0 +1,37 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "The Guardian Content Editions API",
+    "version": "2.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "api-key",
+      "value": "{{api-key}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Editions",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List all editions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://content.guardianapis.com/editions"
+          },
+          "docs": "Retrieve all Guardian editions (UK, US, Australia, International, Europe)."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
