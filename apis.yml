@@ -26,25 +26,22 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/guardian.png
 name: The Guardian
-description: "The Guardian newspaper REST API providing access to 2M+ articles, news content, sections, tags, editions, and real-time breaking news from Guardian journalists worldwide. The API covers all articles published since 1999 and supports advanced search, filtering by section, tag, date range, and edition (UK, US, Australia)."
+description: The Guardian newspaper REST API providing access to 2M+ articles, news content, sections, tags, editions, and real-time breaking news from Guardian journalists worldwide. The API covers all articles published since 1999 and supports advanced search, filtering by section, tag, date range, and edition (UK, US, Australia).
 url: https://open-platform.theguardian.com/
 specificationVersion: '0.23'
 created: '2026-06-13'
 modified: '2026-06-13'
-x-category: "News"
+x-category: News
 x-tier: 2
 tags:
-  - News
-  - Media
-  - Content
-  - Articles
-  - Journalism
+- News
+- Media
+- Content
+- Articles
+- Journalism
 apis:
 - name: The Guardian Content API
-  description: >-
-    Search and retrieve articles, news content, and multimedia from The Guardian's archive of 2 million+
-    pieces of content published since 1999. Supports keyword search, section filtering, tag filtering,
-    date range queries, and retrieval of full article body text with metadata.
+  description: Search and retrieve articles, news content, and multimedia from The Guardian's archive of 2 million+ pieces of content published since 1999. Supports keyword search, section filtering, tag filtering, date range queries, and retrieval of full article body text with metadata.
   humanURL: https://open-platform.theguardian.com/documentation/
   baseURL: https://content.guardianapis.com/
   tags:
@@ -103,27 +100,36 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/guardian-tags-api-openapi.yml
-common:
-  - type: AgenticAccess
-    url: agentic-access/guardian-agentic-access.yml
-  - type: VulnerabilityDisclosure
-    url: security/guardian-vulnerability-disclosure.yml
-  - type: DomainSecurity
-    url: security/guardian-domain-security.yml
-  - type: Authentication
-    url: authentication/guardian-authentication.yml
-  - type: Website
-    url: https://open-platform.theguardian.com/
+- name: The Guardian
+  description: Access all the content the Guardian creates, categorised by tags and section
+  humanURL: http://open-platform.theguardian.com/
+  baseURL: http://open-platform.theguardian.com/
+  tags:
+  - News
+  properties:
   - type: Documentation
-    url: https://open-platform.theguardian.com/documentation/
-  - type: RegistrationForm
-    url: https://open-platform.theguardian.com/access/
-  - type: Support
-    url: https://groups.google.com/g/guardian-api-talk
-  - type: TermsOfService
-    url: https://open-platform.theguardian.com/legal/terms/
-  - type: Blog
-    url: https://www.theguardian.com/info/series/digital-blog/rss
+    url: http://open-platform.theguardian.com/
+common:
+- type: AgenticAccess
+  url: agentic-access/guardian-agentic-access.yml
+- type: VulnerabilityDisclosure
+  url: security/guardian-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/guardian-domain-security.yml
+- type: Authentication
+  url: authentication/guardian-authentication.yml
+- type: Website
+  url: https://open-platform.theguardian.com/
+- type: Documentation
+  url: https://open-platform.theguardian.com/documentation/
+- type: RegistrationForm
+  url: https://open-platform.theguardian.com/access/
+- type: Support
+  url: https://groups.google.com/g/guardian-api-talk
+- type: TermsOfService
+  url: https://open-platform.theguardian.com/legal/terms/
+- type: Blog
+  url: https://www.theguardian.com/info/series/digital-blog/rss
 maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
+- FN: Kin Lane
+  email: kin@apievangelist.com

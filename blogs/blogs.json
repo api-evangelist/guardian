@@ -2,20 +2,18 @@
   "repo": "guardian",
   "feeds": [
     {
+      "source": "https://open-platform.theguardian.com/legal/terms/",
+      "error": "HTTPError"
+    },
+    {
       "source": "https://www.theguardian.com/info/series/digital-blog/rss",
       "feed_url": "https://www.theguardian.com/info/series/digital-blog/rss",
       "title": "",
       "saved": 0,
-      "method": "feed",
-      "nature": "undetermined",
-      "nature_basis": null
-    },
-    {
-      "source": "https://open-platform.theguardian.com/legal/terms/",
-      "error": "HTTPError"
+      "method": "feed"
     }
   ],
-  "fetched": "2026-08-30T22:33:40Z",
+  "fetched": "2026-09-06T19:17:18Z",
   "post_count": 21,
   "feed_nature": "undetermined",
   "feed_nature_basis": null,
