@@ -1,10 +1,7 @@
 {
   "provider": "guardian",
   "sources": [
-    "guardian-content-api-openapi.yml",
-    "guardian-editions-api-openapi.yml",
-    "guardian-sections-api-openapi.yml",
-    "guardian-tags-api-openapi.yml"
+    "_original/openapi.json"
   ],
   "outputs": [
     "guardian-content-api-openapi.yml",
@@ -15,6 +12,15 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "openapi.json: upgraded openapi 3.0.3 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "guardian-content-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "guardian-editions-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "guardian-sections-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "guardian-tags-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

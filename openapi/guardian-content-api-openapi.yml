@@ -1,6 +1,6 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: The Guardian Content API
+  title: Guardian Content API
   description: The Guardian's Open Platform Content API provides free access to all content published on theguardian.com. Search for articles, browse sections and tags, retrieve specific content items, and access edition-specific content. Supports filtering by date, section, tag, and more.
   version: 2.0.0
   contact:
@@ -229,6 +229,38 @@ paths:
                 $ref: '#/components/schemas/ErrorResponse'
 components:
   schemas:
+    Tag:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Tag identifier
+        type:
+          type: string
+          description: Tag type
+          enum:
+          - keyword
+          - series
+          - contributor
+          - blog
+          - tone
+          - type
+          - newspaper-book
+          - newspaper-book-section
+        sectionId:
+          type: string
+        sectionName:
+          type: string
+        webTitle:
+          type: string
+        webUrl:
+          type: string
+          format: uri
+        apiUrl:
+          type: string
+          format: uri
+        keywordType:
+          type: string
     SearchResponse:
       type: object
       properties:
@@ -270,51 +302,6 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/ContentItem'
-    Tag:
-      type: object
-      properties:
-        id:
-          type: string
-          description: Tag identifier
-        type:
-          type: string
-          description: Tag type
-          enum:
-          - keyword
-          - series
-          - contributor
-          - blog
-          - tone
-          - type
-          - newspaper-book
-          - newspaper-book-section
-        sectionId:
-          type: string
-        sectionName:
-          type: string
-        webTitle:
-          type: string
-        webUrl:
-          type: string
-          format: uri
-        apiUrl:
-          type: string
-          format: uri
-        keywordType:
-          type: string
-    ErrorResponse:
-      type: object
-      properties:
-        response:
-          type: object
-          properties:
-            status:
-              type: string
-              enum:
-              - error
-            message:
-              type: string
-              description: Error message
     ItemResponse:
       type: object
       properties:
@@ -329,6 +316,19 @@ components:
               type: integer
             content:
               $ref: '#/components/schemas/ContentItem'
+    ErrorResponse:
+      type: object
+      properties:
+        response:
+          type: object
+          properties:
+            status:
+              type: string
+              enum:
+              - error
+            message:
+              type: string
+              description: Error message
     ContentItem:
       type: object
       properties:
