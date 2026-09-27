@@ -72,30 +72,6 @@ paths:
                 $ref: '#/components/schemas/TagsResponse'
 components:
   schemas:
-    TagsResponse:
-      type: object
-      properties:
-        response:
-          type: object
-          properties:
-            status:
-              type: string
-            userTier:
-              type: string
-            total:
-              type: integer
-            startIndex:
-              type: integer
-            pageSize:
-              type: integer
-            currentPage:
-              type: integer
-            pages:
-              type: integer
-            results:
-              type: array
-              items:
-                $ref: '#/components/schemas/Tag'
     Tag:
       type: object
       properties:
@@ -128,6 +104,30 @@ components:
           format: uri
         keywordType:
           type: string
+    TagsResponse:
+      type: object
+      properties:
+        response:
+          type: object
+          properties:
+            status:
+              type: string
+            userTier:
+              type: string
+            total:
+              type: integer
+            startIndex:
+              type: integer
+            pageSize:
+              type: integer
+            currentPage:
+              type: integer
+            pages:
+              type: integer
+            results:
+              type: array
+              items:
+                $ref: '#/components/schemas/Tag'
   securitySchemes:
     apiKeyQuery:
       type: apiKey
