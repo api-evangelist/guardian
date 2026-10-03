@@ -33,22 +33,6 @@ paths:
                 $ref: '#/components/schemas/EditionsResponse'
 components:
   schemas:
-    EditionsResponse:
-      type: object
-      properties:
-        response:
-          type: object
-          properties:
-            status:
-              type: string
-            userTier:
-              type: string
-            total:
-              type: integer
-            results:
-              type: array
-              items:
-                $ref: '#/components/schemas/Edition'
     Edition:
       type: object
       properties:
@@ -67,6 +51,22 @@ components:
         apiUrl:
           type: string
           format: uri
+    EditionsResponse:
+      type: object
+      properties:
+        response:
+          type: object
+          properties:
+            status:
+              type: string
+            userTier:
+              type: string
+            total:
+              type: integer
+            results:
+              type: array
+              items:
+                $ref: '#/components/schemas/Edition'
   securitySchemes:
     apiKeyQuery:
       type: apiKey

@@ -39,6 +39,22 @@ paths:
                 $ref: '#/components/schemas/SectionsResponse'
 components:
   schemas:
+    SectionsResponse:
+      type: object
+      properties:
+        response:
+          type: object
+          properties:
+            status:
+              type: string
+            userTier:
+              type: string
+            total:
+              type: integer
+            results:
+              type: array
+              items:
+                $ref: '#/components/schemas/Section'
     Section:
       type: object
       properties:
@@ -69,22 +85,6 @@ components:
                 format: uri
               code:
                 type: string
-    SectionsResponse:
-      type: object
-      properties:
-        response:
-          type: object
-          properties:
-            status:
-              type: string
-            userTier:
-              type: string
-            total:
-              type: integer
-            results:
-              type: array
-              items:
-                $ref: '#/components/schemas/Section'
   securitySchemes:
     apiKeyQuery:
       type: apiKey

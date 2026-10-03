@@ -229,106 +229,6 @@ paths:
                 $ref: '#/components/schemas/ErrorResponse'
 components:
   schemas:
-    Tag:
-      type: object
-      properties:
-        id:
-          type: string
-          description: Tag identifier
-        type:
-          type: string
-          description: Tag type
-          enum:
-          - keyword
-          - series
-          - contributor
-          - blog
-          - tone
-          - type
-          - newspaper-book
-          - newspaper-book-section
-        sectionId:
-          type: string
-        sectionName:
-          type: string
-        webTitle:
-          type: string
-        webUrl:
-          type: string
-          format: uri
-        apiUrl:
-          type: string
-          format: uri
-        keywordType:
-          type: string
-    ErrorResponse:
-      type: object
-      properties:
-        response:
-          type: object
-          properties:
-            status:
-              type: string
-              enum:
-              - error
-            message:
-              type: string
-              description: Error message
-    SearchResponse:
-      type: object
-      properties:
-        response:
-          type: object
-          properties:
-            status:
-              type: string
-              description: Response status
-              enum:
-              - ok
-              - error
-            userTier:
-              type: string
-              description: API access tier
-              enum:
-              - developer
-              - partner
-              - internal
-            total:
-              type: integer
-              description: Total number of results
-            startIndex:
-              type: integer
-              description: Starting index of results
-            pageSize:
-              type: integer
-              description: Number of results per page
-            currentPage:
-              type: integer
-              description: Current page number
-            pages:
-              type: integer
-              description: Total number of pages
-            orderBy:
-              type: string
-              description: Sort order of results
-            results:
-              type: array
-              items:
-                $ref: '#/components/schemas/ContentItem'
-    ItemResponse:
-      type: object
-      properties:
-        response:
-          type: object
-          properties:
-            status:
-              type: string
-            userTier:
-              type: string
-            total:
-              type: integer
-            content:
-              $ref: '#/components/schemas/ContentItem'
     ContentItem:
       type: object
       properties:
@@ -407,6 +307,106 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Tag'
+    ErrorResponse:
+      type: object
+      properties:
+        response:
+          type: object
+          properties:
+            status:
+              type: string
+              enum:
+              - error
+            message:
+              type: string
+              description: Error message
+    SearchResponse:
+      type: object
+      properties:
+        response:
+          type: object
+          properties:
+            status:
+              type: string
+              description: Response status
+              enum:
+              - ok
+              - error
+            userTier:
+              type: string
+              description: API access tier
+              enum:
+              - developer
+              - partner
+              - internal
+            total:
+              type: integer
+              description: Total number of results
+            startIndex:
+              type: integer
+              description: Starting index of results
+            pageSize:
+              type: integer
+              description: Number of results per page
+            currentPage:
+              type: integer
+              description: Current page number
+            pages:
+              type: integer
+              description: Total number of pages
+            orderBy:
+              type: string
+              description: Sort order of results
+            results:
+              type: array
+              items:
+                $ref: '#/components/schemas/ContentItem'
+    Tag:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Tag identifier
+        type:
+          type: string
+          description: Tag type
+          enum:
+          - keyword
+          - series
+          - contributor
+          - blog
+          - tone
+          - type
+          - newspaper-book
+          - newspaper-book-section
+        sectionId:
+          type: string
+        sectionName:
+          type: string
+        webTitle:
+          type: string
+        webUrl:
+          type: string
+          format: uri
+        apiUrl:
+          type: string
+          format: uri
+        keywordType:
+          type: string
+    ItemResponse:
+      type: object
+      properties:
+        response:
+          type: object
+          properties:
+            status:
+              type: string
+            userTier:
+              type: string
+            total:
+              type: integer
+            content:
+              $ref: '#/components/schemas/ContentItem'
   securitySchemes:
     apiKeyQuery:
       type: apiKey
