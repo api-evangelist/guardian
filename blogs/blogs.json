@@ -2,10 +2,6 @@
   "repo": "guardian",
   "feeds": [
     {
-      "source": "https://open-platform.theguardian.com/legal/terms/",
-      "error": "HTTPError"
-    },
-    {
       "source": "https://www.theguardian.com/info/series/digital-blog/rss",
       "feed_url": "https://www.theguardian.com/info/series/digital-blog/rss",
       "title": "",
@@ -13,7 +9,7 @@
       "method": "feed"
     }
   ],
-  "fetched": "2026-10-03T12:30:02Z",
+  "fetched": "2026-10-10T13:15:00Z",
   "post_count": 21,
   "feed_nature": "undetermined",
   "feed_nature_basis": null,
