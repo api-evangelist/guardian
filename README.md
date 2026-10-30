@@ -1,4 +1,4 @@
-# The Guardian (guardian)
+# The Guardian
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,53 +64,163 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-The Guardian newspaper REST API providing access to 2M+ articles, news content, sections, tags, editions, and real-time breaking news from Guardian journalists worldwide.
+The Guardian newspaper REST API providing access to 2M+ articles, news content, sections, tags, editions, and real-time breaking news from Guardian journalists worldwide. The API covers all articles published since 1999 and supports advanced search, filtering by section, tag, date range, and edition (UK, US, Australia).
 
-## Scope
+**Areas:** News · Media · Content · Articles · Journalism
 
-- **Position:** Consuming
-- **Access:** 3rd-Party
+## The Guardian on APIs.io
 
-## Tags
+Everything profiled for The Guardian is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/guardian/](https://apis.io/providers/guardian/)** — or go straight to one of the APIs or properties below.
 
-- News
-- Media
-- Content
-- Articles
-- Journalism
+### APIs (6)
 
-## Timestamps
+- [The Guardian Content API](https://apis.io/apis/guardian/the-guardian-content-api/) — Search and retrieve articles, news content, and multimedia from The Guardian's archive of 2 million+ pieces of content published since 1999. Supports…
+- [The Guardian Content API](https://apis.io/apis/guardian/guardian-content-api/) — Search and retrieve Guardian content items
+- [The Guardian Editions API](https://apis.io/apis/guardian/guardian-editions-api/) — Browse Guardian editions (UK, US, AU, International, Europe)
+- [The Guardian Sections API](https://apis.io/apis/guardian/guardian-sections-api/) — Browse Guardian sections
+- [The Guardian Tags API](https://apis.io/apis/guardian/guardian-tags-api/) — Browse and search Guardian tags (keywords, series, contributors, etc.)
+- [The Guardian](https://apis.io/apis/guardian/the-guardian/) — Access all the content the Guardian creates, categorised by tags and section
 
-- **Created:** 2026-06-13
-- **Modified:** 2026-06-13
+### Published properties
 
-## APIs
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-### The Guardian Content API
+#### Agentic access (1)
 
-Search and retrieve articles, news content, and multimedia from The Guardian's archive of over 2 million pieces of content published since 1999. Supports keyword search, section filtering, tag filtering, date range queries, and retrieval of full article body text with metadata.
+Which operations an agent can call, which act, and which need a human in the loop.
 
-**Base URL:** `https://content.guardianapis.com/`
+- [Guardian Agentic Access](https://apis.io/agentic-access/guardian/guardian-agentic-access/)
 
-#### Endpoints
+#### JSON Schema (10)
 
-- `GET /search` — Search articles by keywords and filters
-- `GET /sections` — List all available news sections (75+)
-- `GET /tags` — List all article classification tags
-- `GET /editions` — List editions (UK, US, Australia)
-- `GET /{articleId}` — Retrieve a specific article by ID
+The data models the API reads and writes.
 
-#### Tags
+- [ContentItem](https://apis.io/schemas/guardian/contentitem/)
+- [Edition](https://apis.io/schemas/guardian/edition/)
+- [EditionsResponse](https://apis.io/schemas/guardian/editionsresponse/)
+- [ErrorResponse](https://apis.io/schemas/guardian/errorresponse/)
+- [ItemResponse](https://apis.io/schemas/guardian/itemresponse/)
+- [SearchResponse](https://apis.io/schemas/guardian/searchresponse/)
+- [Section](https://apis.io/schemas/guardian/section/)
+- [SectionsResponse](https://apis.io/schemas/guardian/sectionsresponse/)
+- [Tag](https://apis.io/schemas/guardian/tag/)
+- [TagsResponse](https://apis.io/schemas/guardian/tagsresponse/)
 
-- News
-- Articles
-- Content
-- Search
+#### JSON-LD (1)
 
-#### Properties
+Linked-data contexts for the provider's vocabulary.
 
+- [Guardian Context](https://apis.io/jsonld/guardian/guardian-context/)
+
+#### Examples (4)
+
+Example requests and responses.
+
+- [Content Item](https://apis.io/examples/guardian/content-item/)
+- [Search Response](https://apis.io/examples/guardian/search-response/)
+- [Sections Response](https://apis.io/examples/guardian/sections-response/)
+- [Tags Response](https://apis.io/examples/guardian/tags-response/)
+
+#### Collections (4)
+
+Postman and Open Collection request collections.
+
+- [The Guardian Content API](https://apis.io/collections/guardian/open-guardian-content-api/)
+- [The Guardian Content Editions API](https://apis.io/collections/guardian/open-guardian-editions-api/)
+- [The Guardian Content Sections API](https://apis.io/collections/guardian/open-guardian-sections-api/)
+- [The Guardian Content Tags API](https://apis.io/collections/guardian/open-guardian-tags-api/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [The Guardian — jsonschema rules](https://apis.io/rules/guardian/guardian-jsonschema-spectral-rules/)
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Guardian Authentication](https://apis.io/security/guardian/guardian-authentication/)
+- [Guardian Domain Security](https://apis.io/security/guardian/guardian-domain-security/)
+- [Guardian Vulnerability Disclosure](https://apis.io/security/guardian/guardian-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Guardian Plans Pricing](https://apis.io/plans/guardian/guardian-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Guardian Rate Limits](https://apis.io/rate-limits/guardian/guardian-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Guardian Finops](https://apis.io/finops/guardian/guardian-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://open-platform.theguardian.com/)
 - [Documentation](https://open-platform.theguardian.com/documentation/)
-- [Registration](https://open-platform.theguardian.com/access/)
-- [Plans](plans/guardian-plans-pricing.yml)
-- [Rate Limits](rate-limits/guardian-rate-limits.yml)
-- [FinOps](finops/guardian-finops.yml)
+- [Support](https://groups.google.com/g/guardian-api-talk)
+- [Blog](https://www.theguardian.com/info/series/digital-blog/rss)
+- [Terms of service](https://open-platform.theguardian.com/legal/terms/)
+
+## API Evangelist rating
+
+**Kin Score 30.1** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 64.3 |
+| Contract quality | 54.5 |
+| Contract governance | 9.8 |
+| Operational transparency | 7.9 |
+| Developer ergonomics | 28.6 |
+| Access clarity | 5.3 |
+
+**Agent readiness 27.4** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | na |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | na |
+| Error Semantics | verified |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | na |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 22.5** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/guardian/](https://apis.io/providers/guardian/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for The Guardian: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/guardian/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
